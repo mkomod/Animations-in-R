@@ -13,10 +13,10 @@ z.c <- (z[-1, -1] + z[-1, -ncol(z)] + z[-nrow(z), -1]
 z.range <- cut(z.c, 100)
 cols <- c.p(100)
 
-gifname <- "concave"
+gifname <- "saddle"
 system("mkdir anim")
 
-for (i in 0:180) {
+for (i in 0:360) {
     jpeg(paste0("./anim/", sprintf("%03d", i), ".jpg"), width=720, height=480) 
     persp(x, y, z, theta=i/2, phi=30,
 	  col=cols[z.range], expand=1, border=T, box=F, lwd=0.2)
