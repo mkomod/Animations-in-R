@@ -13,7 +13,7 @@ z.c <- (z[-1, -1] + z[-1, -ncol(z)] + z[-nrow(z), -1]
 z.range <- cut(z.c, 100)
 cols <- c.p(100)
 
-gifname <- "sinc_comp"
+gifname <- "concave"
 system("mkdir anim")
 
 for (i in 0:180) {
